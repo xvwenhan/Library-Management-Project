@@ -1,31 +1,22 @@
 
-# 默认排除仓库根目录下的全部内容
-/*
+# 排除静态资源
+/static/
+/staticfiles/
 
-# 放行需要完整扫描的三个目录
-!/adherants/
-!/ouvrages/
-!/templates/
-
-# 放行 Django 配置目录和入口文件
-!/gestionbib/
-!/manage.py
-
-# 排除 gestionbib 下的全部内容
-/gestionbib/*
-
-# 只放行指定的四个配置文件
-!/gestionbib/settings.py
-!/gestionbib/urls.py
-!/gestionbib/wsgi.py
-!/gestionbib/asgi.py
-
-# 排除允许扫描的目录中可能存在的依赖和缓存
+# 排除虚拟环境和第三方依赖
 **/env/
 **/venv/
 **/.venv/
 **/site-packages/
+**/node_modules/
+
+# 排除缓存
 **/__pycache__/
 **/.pytest_cache/
-**/node_modules/
+
+# 排除数据库及无关文件
+/db.sqlite3
+/README.md
+
+# 排除压缩后的 JavaScript
 **/*.min.js
