@@ -1,0 +1,31 @@
+
+# 默认排除仓库根目录下的全部内容
+/*
+
+# 放行需要完整扫描的三个目录
+!/adherants/
+!/ouvrages/
+!/templates/
+
+# 放行 Django 配置目录和入口文件
+!/gestionbib/
+!/manage.py
+
+# 排除 gestionbib 下的全部内容
+/gestionbib/*
+
+# 只放行指定的四个配置文件
+!/gestionbib/settings.py
+!/gestionbib/urls.py
+!/gestionbib/wsgi.py
+!/gestionbib/asgi.py
+
+# 排除允许扫描的目录中可能存在的依赖和缓存
+**/env/
+**/venv/
+**/.venv/
+**/site-packages/
+**/__pycache__/
+**/.pytest_cache/
+**/node_modules/
+**/*.min.js
